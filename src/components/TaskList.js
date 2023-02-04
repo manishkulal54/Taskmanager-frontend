@@ -50,7 +50,9 @@ export default function TaskList() {
       alert(data.error);
     } else {
       setTasks(data.data);
-      setCheck(data.data);
+      setTimeout(() => {
+        setCheck(data.data);
+      }, 2000);
     }
   }
   async function deleteTask(id,title){
